@@ -136,7 +136,7 @@
                 <button type="button" class="btn btn-view" onclick="openTable()"> 
                     📊 عرض السجل
                 </button>
-                <button type="button" class="btn btn-view" href="https://akmnuts.github.io/akm/booking.html?type=event&lang=ar"> 
+                <button type="button" class="btn btn-view" onclick="goToBooking('event')"> 
                     📊 حجز باقة
                 </button>
             </div>
@@ -222,6 +222,10 @@
             });
         });
 
+        function goToBooking(type) {
+        // currentLang هو المتغير الذي يحمل 'ar' أو 'en' في صفحتك الرئيسية
+        window.location.href = `https://akmnuts.github.io/akm/booking.html?type=event&lang=ar`;
+        }
         // دالة فتح الجدول وجلب البيانات (GET)
         function openTable() {
             document.getElementById('tableModal').style.display = 'flex';
